@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Leaf, Recycle, Trash2 } from "lucide-react";
 import ImageUploader from "@/components/ImageUploader";
 import ClassificationResult from "@/components/ClassificationResult";
+import WasteGuide from "@/components/WasteGuide";
 import { classifyWaste } from "@/lib/wasteClassifier";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -102,6 +103,11 @@ const Index = () => {
           </div>
         )}
       </main>
+
+      {/* Waste Classification Guide */}
+      <div className="border-t border-border">
+        <WasteGuide />
+      </div>
 
       {/* Footer */}
       <footer className="border-t border-border py-8 text-center text-sm text-muted-foreground">
