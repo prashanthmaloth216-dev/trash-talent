@@ -47,6 +47,25 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        eco: {
+          green: "hsl(var(--eco-green))",
+          "green-light": "hsl(var(--eco-green-light))",
+          brown: "hsl(var(--eco-brown))",
+          "brown-light": "hsl(var(--eco-brown-light))",
+          amber: "hsl(var(--eco-amber))",
+        },
+        biodegradable: {
+          DEFAULT: "hsl(var(--biodegradable))",
+          bg: "hsl(var(--biodegradable-bg))",
+        },
+        recyclable: {
+          DEFAULT: "hsl(var(--recyclable))",
+          bg: "hsl(var(--recyclable-bg))",
+        },
+        "non-biodegradable": {
+          DEFAULT: "hsl(var(--non-biodegradable))",
+          bg: "hsl(var(--non-biodegradable-bg))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -57,6 +76,10 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      fontFamily: {
+        heading: ["Space Grotesk", "sans-serif"],
+        body: ["DM Sans", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
