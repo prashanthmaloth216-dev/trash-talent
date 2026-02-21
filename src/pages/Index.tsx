@@ -104,11 +104,6 @@ const Index = () => {
         )}
       </main>
 
-      {/* Waste Classification Guide */}
-      <div className="border-t border-border">
-        <WasteGuide />
-      </div>
-
       {/* Footer */}
       <footer className="border-t border-border py-8 text-center text-sm text-muted-foreground">
         <p>Smart Waste Classifier — Helping sort waste for a cleaner planet 🌍</p>
