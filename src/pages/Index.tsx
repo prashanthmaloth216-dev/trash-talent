@@ -8,7 +8,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 const Index = () => {
   const [preview, setPreview] = useState<string | null>(null);
-  const [result, setResult] = useState<{ label: string; confidence: number } | null>(null);
+  const [result, setResult] = useState<{ label: string; confidence: number; subType: string } | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleImageSelect = async (file: File, previewUrl: string) => {
@@ -17,7 +17,7 @@ const Index = () => {
     setIsLoading(true);
     try {
       const classification = await classifyWaste(file);
-      setResult({ label: classification.label, confidence: classification.confidence });
+      setResult({ label: classification.label, confidence: classification.confidence, subType: classification.subType });
     } catch {
       setResult(null);
     } finally {
@@ -88,6 +88,7 @@ const Index = () => {
             <ClassificationResult
               label={result?.label ?? null}
               confidence={result?.confidence ?? null}
+              subType={result?.subType ?? null}
               isLoading={isLoading}
             />
 

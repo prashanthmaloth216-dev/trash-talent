@@ -3,6 +3,7 @@ import { Leaf, Recycle, Trash2, Loader2 } from "lucide-react";
 interface ClassificationResultProps {
   label: string | null;
   confidence: number | null;
+  subType: string | null;
   isLoading: boolean;
 }
 
@@ -30,7 +31,7 @@ const categoryConfig = {
   },
 };
 
-const ClassificationResult = ({ label, confidence, isLoading }: ClassificationResultProps) => {
+const ClassificationResult = ({ label, confidence, subType, isLoading }: ClassificationResultProps) => {
   if (isLoading) {
     return (
       <div className="flex flex-col items-center gap-3 rounded-2xl border border-border bg-card p-8">
@@ -55,6 +56,11 @@ const ClassificationResult = ({ label, confidence, isLoading }: ClassificationRe
         </div>
         <div className="flex-1">
           <h3 className={`text-xl font-heading font-bold ${config.colorClass}`}>{label}</h3>
+          {subType && subType !== "General" && (
+            <span className="text-xs font-medium text-muted-foreground bg-muted rounded-full px-2 py-0.5 inline-block mt-0.5">
+              {subType}
+            </span>
+          )}
           <p className="text-sm text-muted-foreground mt-0.5">{config.tip}</p>
         </div>
       </div>
